@@ -102,6 +102,7 @@ function run_e2e_rekt_tests(){
   images_file=$(dirname $(realpath "$0"))/images.yaml
   #skipping for P/Z as the test images aren't multiarch.
   if [ $HW_ARCH != "ppc64le" ] && [ $HW_ARCH != "s390x" ]; then
+    echo -n "Mayukh"
     make generate-release
   fi
   cat "${images_file}"
